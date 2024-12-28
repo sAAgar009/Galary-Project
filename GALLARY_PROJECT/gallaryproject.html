@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="gallaryproject.css">
+    <script src="gallaryproject.js" defer></script>
+</head>
+<body>
+    <div id="bigImage">
+        <span id="close" onclick="closewindow()">X</span>
+        <div id="bigImg">
+
+        </div>
+        <input type="button" id="editButton"  value="Edit Image" onclick="openEditWindow()">
+    </div>
+    <div id="gallary">
+        <h1 id="headingOfGallary">My gallary</h1>
+        <div id="images">
+            <img class="a" onmousedown="passSrc(this.src)" src="./Asset/0.jpg">
+            <img class="a" onmousedown="passSrc(this.src)" src="./Asset/1.jpg">
+            <img class="a" onmousedown="passSrc(this.src)" src="./Asset/2.jpg">
+            <img class="a" onmousedown="passSrc(this.src)" src="./Asset/3.jpg">
+            <img class="a" onmousedown="passSrc(this.src)" src="./Asset/4.jpg">
+            <img class="a" onmousedown="passSrc(this.src)" src="./Asset/5.jpg">
+            <img class="a" onmousedown="passSrc(this.src)" src="./Asset/6.jpg">
+            <img class="a" onmousedown="passSrc(this.src)" src="./Asset/7.jpg">
+            <img class="a" onmousedown="passSrc(this.src)" src="./Asset/8.jpg">
+            <img class="a" onmousedown="passSrc(this.src)" src="./Asset/9.jpg">
+            <img class="a" onmousedown="passSrc(this.src)" src="./Asset/10.jpg">
+            <img class="a" onmousedown="passSrc(this.src)" src="./Asset/11.jpg">
+            <img class="a" onmousedown="passSrc(this.src)" src="./Asset/12.jpg">
+            <img class="a" onmousedown="passSrc(this.src)" src="./Asset/13.jpg">
+            <img class="a" onmousedown="passSrc(this.src)" src="./Asset/14.jpg">
+        </div>
+    </div>
+
+
+     <div id="gallaryImageEdit">
+        <span id="closeGallaryEdit" onclick="closewindow()">X</span>
+        <div id="imageContainer">
+           <div id="image">
+
+           </div>
+        </div>
+        <div id="editContainer">
+            <div id="editFilter">
+                <h2>Filter Edit</h2>
+                <div class="filtercontainer">
+                    <label for="blur">Blur</label>
+                    <input type="range" id="blur" min="0" max="300" value="0" oninput="imageEdit()">
+                </div>
+                <div class="filtercontainer">
+                    <label for="brightness">Brightness</label>
+                    <input type="range" id="brightness" min="0" max="200" value="100" oninput="imageEdit()">
+                </div>
+                <div class="filtercontainer">
+                    <label for="contrast">Contrast</label>
+                    <input type="range" id="contrast" min="0" max="500" value="100" oninput="imageEdit()">
+                </div>
+                <div class="filtercontainer">
+                    <label for="grayscale">GrayScale</label>
+                    <input type="range" id="grayscale" min="0" max="100" value="0" oninput="imageEdit()">
+                </div>
+                <div class="filtercontainer">
+                    <label for="hue-rotate">Hue-rotate</label>
+                    <input type="range" id="hue-rotate" min="0" max="360" value="0" oninput="imageEdit()">
+                </div>
+                <div class="filtercontainer">
+                    <label for="invert">Invert</label>
+                    <input type="range" id="invert" min="0" max="100" value="0" oninput="imageEdit()">
+                </div>
+                <div class="filtercontainer">
+                    <label for="opacity">Opacity</label>
+                    <input type="range" id="opacity" min="0" max="200" value="100" oninput="imageEdit()">
+                </div>
+                <div class="filtercontainer">
+                    <label for="saturate">Saturate</label>
+                    <input type="range" id="saturate" min="0" max="500" value="100" oninput="imageEdit()">
+                </div>
+                <div class="filtercontainer">
+                    <label for="sepia">Sepia</label>
+                    <input type="range" id="sepia" min="0" max="100" value="0" oninput="imageEdit()">
+                </div>
+            </div>
+            <div id="editTransform">
+                <h2>Transform Edit</h2>
+                <div class="filtercontainer">
+                    <label for="rotate">Rotate</label>
+                    <input type="range" id="rotate" min="0" max="360" value="0" oninput="imageEdit()">
+                </div>
+                <div class="filtercontainer">
+                    <label for="rotateX">RotateX</label>
+                    <input type="range" id="rotateX" min="0" max="360" value="0" oninput="imageEdit()">
+                </div>
+                <div class="filtercontainer">
+                    <label for="rotateY">RotateY</label>
+                    <input type="range" id="rotateY" min="0" max="360" value="0" oninput="imageEdit()">
+                </div>
+                <div class="filtercontainer">
+                    <label for="scaleX">scaleX</label>
+                    <input type="range" id="scaleX" min="0" max="3" value="1" oninput="imageEdit()">
+                </div>
+                <div class="filtercontainer">
+                    <label for="scaleY">ScaleY</label>
+                    <input type="range" id="scaleY" min="0" max="3" value="1" oninput="imageEdit()">
+                </div>
+                <div class="filtercontainer">
+                    <label for="skewX">SkewX</label>
+                    <input type="range" id="skewX" min="0" max="360" value="0" oninput="imageEdit()">
+                </div>
+                <div class="filtercontainer">
+                    <label for="skewY">SkewY</label>
+                    <input type="range" id="skewY" min="0" max="360" value="0" oninput="imageEdit()">
+                </div>
+                <div class="filtercontainer">
+                    <label for="translateX">TranslateX</label>
+                    <input type="range" id="translateX" min="0" max="360" value="0" oninput="imageEdit()">
+                </div>
+                <div class="filtercontainer">
+                    <label for="translateY">TranslateY</label>
+                    <input type="range" id="translateY" min="0" max="360" value="0" oninput="imageEdit()">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
